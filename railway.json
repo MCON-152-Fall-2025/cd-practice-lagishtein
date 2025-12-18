@@ -2,10 +2,10 @@
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "cd recipeshare && mvn -DskipTests package"
+    "buildCommand": "mvn -DskipTests package"
   },
   "deploy": {
-    "startCommand": "cd recipeshare && java -jar target/*.jar",
+    "startCommand": "java -jar target/*.jar",
     "healthcheckPath": "/actuator/health",
     "healthcheckTimeout": 100
   }
